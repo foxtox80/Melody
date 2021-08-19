@@ -1,5 +1,13 @@
 @charset "UTF-8";
 /** Цвета **/
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("BebasNeueRegular"), url("../fonts/BebasNeueRegular.woff2") format("woff2"), url("../fonts/BebasNeueRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,7 +16,6 @@
 html {
   color: #FFFFFF;
   font-size: 16px;
-  font-family: 'Bebas Neue', cursive;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -18,9 +25,18 @@ ul, li {
   list-style: none;
 }
 
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -33,6 +49,7 @@ a {
 .header {
   background-color: #635854;
   border-bottom: 4px solid #3596F5;
+  margin: 0px 0px 54px 0px;
 }
 
 .header__inner {
@@ -87,5 +104,91 @@ a {
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+}
+
+.home-image path {
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.home-image path:hover {
+  opacity: 0.75;
+}
+
+.main__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.counter-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Bebas Neue";
+  color: #635854;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.counter-group__title {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 37px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.button__watch {
+  padding: 16px 36px;
+  background-color: #3596F5;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.counter {
+  min-height: 185px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.counter__button {
+  background-color: #ffffff;
+  border: none;
+}
+
+.counter__number {
+  font-size: 108px;
+}
+
+.arrow-down {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=styles.css.map */
