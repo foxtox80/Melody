@@ -4,6 +4,8 @@
     transition: all .5s
 .home-image path:hover
     opacity: 0.75
+path.current-floor
+    opacity: 0.75
 .main
     &__inner
         display: flex
@@ -30,7 +32,8 @@
         line-height: 19px
         color: $White
 .counter
-    min-height: 185px
+    height: 185px
+    width: 90px
     display: flex
     flex-direction: column
     align-items: center
@@ -40,5 +43,5 @@
         border: none
     &__number
         font-size: 108px
-.arrow-down
+.counter-down
     transform: rotate(180deg)
