@@ -3,11 +3,17 @@ $(document).ready(function () {
     let floorPath = $(".home-image path");
     let counterUp = $('.counter-up');
     let counterDown = $('.counter-down');
+    let modal = $('.modal');
+    let modalCloseButton = $('.modal-close-button');
+    let viewFlatButton = $('.button__watch');
     floorPath.on("mouseover", function () {
         floorPath.removeClass('current-floor');
         currentFloor = $(this).attr('data-floor');
         $('.counter__number').text(currentFloor);
     });
+    floorPath.on("click", toggleModal);
+    modalCloseButton.on("click", toggleModal);
+    viewFlatButton.on('click', toggleModal);
     counterUp.on("click", function () {
         if (currentFloor < 17) {
             currentFloor++;
@@ -26,4 +32,7 @@ $(document).ready(function () {
             $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor");
         };
     });
+    function toggleModal() {
+        modal.toggleClass('is-open');
+    };
 });
